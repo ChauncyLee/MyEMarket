@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/linear_searchitem"
+        android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:padding="@dimen/activity_horizontal_margin"
+                  android:orientation="horizontal"
+                  android:weightSum="3">
+    <com.facebook.drawee.view.SimpleDraweeView
+               xmlns:fresco="http://schemas.android.com/apk/res-auto"
+               android:id="@+id/image_search"
+               android:layout_width="0dp"
+               android:layout_height="80dp"
+               android:layout_weight="1"
+               android:layout_gravity="center_vertical"
+               fresco:placeholderImageScaleType="fitCenter"
+               fresco:placeholderImage="@color/stay_color"/>
+        <LinearLayout
+            android:id="@+id/search_item_desc"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1.8"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin">
+            <TextView
+                      android:id="@+id/search_item_name"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Denim Shirt"
+                      android:textSize="10dp"
+                      android:textStyle="bold"/>
+
+
+            <TextView
+                android:id="@+id/search_item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BDT. 8,999"
+                android:textSize="12dp"
+                android:textColor="#4CAF50"/>
+            <TextView
+                android:id="@+id/search_item_itemid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="itemid"
+                android:visibility="invisible"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_weight="1"
+                        android:id="@+id/search_item_freight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="包邮"
+                        android:textSize="10dp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:id="@+id/search_item_accountPay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="月销量1000笔"
+                        android:textSize="10dp"/>
+                    <TextView
+                        android:layout_gravity="right"
+                        android:id="@+id/search_item_place"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="江苏南通"
+                        android:textSize="10dp"/>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+    <View android:layout_width="match_parent"
+          android:layout_height="@dimen/view_width_xsmall"
+          android:background="@color/grey_light"/>
+</LinearLayout>
+

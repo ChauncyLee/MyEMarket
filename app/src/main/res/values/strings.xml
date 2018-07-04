@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">乔品</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!--Menu item texts -->
+    <string name="action_settings">设置</string>
+    <string name="action_search">搜索</string>
+    <string name="action_cart">购物车</string>
+    <string name="action_notifications">通知</string>
+
+    <string name="item_1">主页</string>
+    <string name="item_2">Electronics</string>
+    <string name="item_3">Lifestyle</string>
+    <string name="item_4">Home Appliances</string>
+    <string name="item_5">Books \u0026 More</string>
+    <string name="item_6">敬请期待</string>
+
+    <string name="my_profile">我的简介</string>
+    <string name="my_rewards">我的奖品</string>
+    <string name="my_orders">我的订单</string>
+    <string name="my_cart">购物车</string>
+    <string name="my_wishlist">收藏</string>
+    <string name="my_account">帐户</string>
+
+    <string name="help_support">帮助支持</string>
+    <string name="contact_us">联系我们</string>
+    <string name="terms_conditions">条款条件</string>
+    <string name="help_center">帮助中心</string>
+
+    <string name="search_hint">搜索商品</string>
+
+
+    <!--Intro slider texts -->
+    <string name="title_activity_welcome">主页</string>
+    <string name="next">下一页</string>
+    <string name="skip">跳过</string>
+    <string name="start">开始</string>
+
+    <string name="slide_1_title">Hello Food!</string>
+    <string name="slide_1_desc">The easiest way to order food from your favourite restaurant!
+    </string>
+
+    <string name="slide_2_title">Movie Tickets</string>
+    <string name="slide_2_desc">Book movie tickets for your family and friends!</string>
+
+    <string name="slide_3_title">Great Discounts</string>
+    <string name="slide_3_desc">Best discounts on every single service we offer!</string>
+
+    <string name="slide_4_title">World Travel</string>
+    <string name="slide_4_desc">Book tickets of any transportation and travel the world!</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome
+        slider -> clear data
+    </string>
+    <string name="play_again">Play Again</string>
+
+</resources>
