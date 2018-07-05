@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.chuncy.adapter.SearchAdapter;
+import com.chuncy.bean.CartItem;
 import com.chuncy.bean.DetailsBean;
 import com.chuncy.bean.ProductBean;
 import com.chuncy.util.AnalyseJson;
@@ -58,7 +59,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_details);
-        TextView textViewAddToCart = (TextView)findViewById(R.id.text_action_bottom1);
+        TextView textViewAddToCart = (TextView)findViewById(R.id.add_to_cart);
         TextView textViewBuyNow = (TextView)findViewById(R.id.text_action_bottom2);
         details_title=(TextView)findViewById(R.id.details_title);
         details_price=(TextView)findViewById(R.id.details_price);
@@ -101,12 +102,18 @@ public class ItemDetailsActivity extends AppCompatActivity {
         }
 
 
+        /**
+         * 加入购物车
+         */
         textViewAddToCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //ImageUrlUtils imageUrlUtils = new ImageUrlUtils();
-                //imageUrlUtils.addCartListImageUri(stringImageUri);
-                Toast.makeText(ItemDetailsActivity.this,"Item added to cart.",Toast.LENGTH_SHORT).show();
+                List<CartItem>mlist=new ArrayList<CartItem>();
+                DBUtils dbutils=new DBUtils(ItemDetailsActivity.this);
+                mlist= dbutils.selectCartItem(item_id);
+                dbutils.saveToCart(data);
+                Toast.makeText(ItemDetailsActivity.this, "添加成功", Toast.LENGTH_SHORT).show();
+
                 MainActivity.notificationCountCart++;
                 NotificationCountSetClass.setNotifyCount(MainActivity.notificationCountCart);
             }

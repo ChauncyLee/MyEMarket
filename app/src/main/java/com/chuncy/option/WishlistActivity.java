@@ -57,11 +57,6 @@ public class WishlistActivity extends AppCompatActivity {
         //设置适配器
         recyclerview.setAdapter(mAdapter);
 
-        ArrayList<String> wishlistImageUri =new ArrayList<String>();//c需要修改
-        RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recyclerview);
-        RecyclerView.LayoutManager recylerViewLayoutManager = new LinearLayoutManager(mContext);
-
-        recyclerView.setLayoutManager(recylerViewLayoutManager);
     }
 
     @Override
@@ -82,11 +77,6 @@ public class WishlistActivity extends AppCompatActivity {
         //设置适配器
         recyclerview.setAdapter(mAdapter);
 
-        ArrayList<String> wishlistImageUri =new ArrayList<String>();//c需要修改
-        RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recyclerview);
-        RecyclerView.LayoutManager recylerViewLayoutManager = new LinearLayoutManager(mContext);
-
-        recyclerView.setLayoutManager(recylerViewLayoutManager);
 
     }
 

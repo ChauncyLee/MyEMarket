@@ -3,6 +3,7 @@ package com.chuncy.util;
 import android.content.Context;
 import android.util.Log;
 
+import com.chuncy.bean.CartItem;
 import com.chuncy.bean.ProductBean;
 
 import org.litepal.LitePal;
@@ -71,6 +72,49 @@ public class DBUtils {
         LitePal.delete(ProductBean.class, id);
         return true;
     }
+    /**
+    * 根据id查询
+    * @param item_id
+    * @return
+            */
+    public List<CartItem> selectCartItem(String item_id){
+        List<CartItem> mlist = LitePal.where("item_id==?",item_id).find(CartItem.class);
+
+        return mlist;
+    }
 
 
+    /**
+     * 加入购物车
+     * @param map
+     */
+    public  void saveToCart(HashMap<String,String> map){
+        String item_id= map.get("item_id");
+        String title=map.get("title");
+        String price=map.get("price");
+        String place=map.get("place");
+        String accountPay=map.get("accountPay");
+        String picURL=map.get("picURL");
+        String shipping=map.get("shipping");
+        CartItem bean=new CartItem();
+        bean.setItem_id(item_id);
+        bean.setTitle(title);
+        bean.setPrice(price);
+        bean.setPlace(place);
+        bean.setAccountPay(accountPay);
+        bean.setPicURL(picURL);
+        bean.setShipping(shipping);
+        bean.saveThrows();
+
+
+    }
+
+    /**
+     * 全部查询购物车
+     * @return
+     */
+    public List<CartItem> selectAllCartItem(){
+        List<CartItem> mlist = LitePal.findAll(CartItem.class);
+        return mlist;
+    }
 }
